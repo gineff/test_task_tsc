@@ -15,7 +15,7 @@ const InstrumentTemplates = () => {
               onClick={() => dispatch(setSlideTemplate(url))}
               className="template__card"
               key={i}
-              style={{ backgroundImage: `url(${url})` }}
+              style={{ backgroundImage: `url(${url.slice(0, -4)}.jpg)` }}
               role="button"
               tabIndex={0}
               aria-label={`Template ${i + 1}`}

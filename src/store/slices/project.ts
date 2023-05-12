@@ -129,7 +129,14 @@ const projectSlice = createSlice({
       .addCase(removeImages.fulfilled, state => {
         state.gallery.images = {}
         state.slides = [
-          ...state.slides.map(slide => ((slide.image = null), slide)),
+          ...state.slides.map(
+            slide => (
+              ((slide.image = null),
+              (slide.template = null),
+              (slide.background = null)),
+              slide
+            )
+          ),
         ]
       })
       .addCase(saveImage.fulfilled, (state, action) => {

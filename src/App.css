@@ -2,11 +2,12 @@
   width: 366px;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #E2E2E3;
-  box-shadow: 0 0 5px 12px #F0F1F1;
+  border: 1px solid #e2e2e3;
+  box-shadow: 0 0 5px 12px #f0f1f1;
+  position: relative;
 }
 
 body {
   overflow: hidden;
-  font: 14px FontRegular
+  font: 14px FontRegular;
 }

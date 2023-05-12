@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect, useRef } from 'react'
 import { useAppDispatch, useAppSelector } from '@hooks/redux_typed_hooks'
+import classnames from 'classnames'
 import { Button } from '@components/Button'
-import './InstrumentGallery.css'
 import { Card } from '@components/InstrumentGalleryCard'
 import { fetchImages, removeImages, saveImage } from '@store/slices/project'
 import { selectGallery } from '@store/selectors'
+import './InstrumentGallery.css'
+import minIcon from '@images/minimize.png'
+import expandIcon from '@images/expand.png'
 
 const InstrumentGallery = () => {
   const inputRef = useRef<HTMLInputElement>(null)
-
+  const [isFullDisplayMode, setDisplayMode] = useState(false)
   const dispatch = useAppDispatch()
   const { images } = useAppSelector(selectGallery)
 
@@ -65,30 +68,35 @@ const InstrumentGallery = () => {
   })
 
   const handleImageRemove = () => dispatch(removeImages())
+  const handleDisplayMode = () => setDisplayMode(!isFullDisplayMode)
 
   return (
-    <div className="instrument-gallery gallery">
-      <div className="gallery__panel">
-        <Button className="btn btn-secondary" onClick={handleImageRemove}>
-          <span className="icon icon-clear">&#215;</span>Очистить
+    <div
+      className={classnames('instrument-gallery', {
+        'full-mode': isFullDisplayMode,
+      })}>
+      <div className="gallery">
+        <Button className="btn full-size-button" onClick={handleDisplayMode}>
+          <span className="icon icon-full-mode">
+            <img
+              src={isFullDisplayMode ? minIcon : expandIcon}
+              alt="mode icon"
+            />
+          </span>
+          {isFullDisplayMode ? 'Свернуть' : 'Развернуть'}
         </Button>
-        <Button className="btn btn-secondary">
-          <span className="icon icon-select"></span>Выбрать
-        </Button>
+        <div className="gallery__panel">
+          <Button className="btn btn-secondary" onClick={handleImageRemove}>
+            <span className="icon icon-clear">&#215;</span>Очистить
+          </Button>
+          <Button className="btn btn-secondary">
+            <span className="icon icon-select"></span>Выбрать
+          </Button>
+        </div>
+        <CardList />
       </div>
-      <CardList />
     </div>
   )
 }
 
 export default InstrumentGallery
-/*
-<Droppable droppableId="list">
-{provided => (
-  <div ref={provided.innerRef} {...provided.droppableProps}>
-    <CardList />
-    {provided.placeholder}
-  </div>
-)}
-</Droppable>
-*/
