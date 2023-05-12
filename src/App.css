@@ -1,0 +1,12 @@
+#root {
+  width: 366px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #E2E2E3;
+  box-shadow: 0 0 5px 12px #F0F1F1;
+}
+
+body {
+  overflow: hidden;
+  font: 14px FontRegular
+}

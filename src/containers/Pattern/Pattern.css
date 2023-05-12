@@ -1,0 +1,13 @@
+.pattern {
+  background-color: #F2F2F2;
+}
+
+.pattern__header{
+  display: flex;
+  height: 50px;
+  background-color: #FFF;
+}
+
+.icon-book > img {
+  height: 20px;
+}

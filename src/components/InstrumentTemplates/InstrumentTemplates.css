@@ -1,0 +1,18 @@
+.template__content {
+  display: flex;
+}
+.template__card {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.template__card:first-child {
+  margin-left: 10px;
+}

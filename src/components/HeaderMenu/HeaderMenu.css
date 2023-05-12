@@ -1,0 +1,26 @@
+.header-menu__wrapper{
+  margin-left: 20px;
+}
+
+.header-menu{
+  display: none;
+}
+
+.header-menu__icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: inherit;
+  padding: 0 5px;
+  border: none;
+  height: 17px;
+  outline: none;
+  cursor: pointer;
+}
+
+.header-menu__icon span{
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}

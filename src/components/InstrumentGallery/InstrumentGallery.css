@@ -1,0 +1,41 @@
+.icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.icon-select {
+  background-image: url('src/assets/images/delete.png');
+  background-repeat: no-repeat;
+}
+
+.gallery {
+  padding: 0 12px;
+}
+
+.gallery__panel {
+  display: flex;
+  padding: 8px 0;
+}
+
+.gallery__panel .btn {
+  margin-right: 10px;
+}
+
+.gallery__content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.gallery__add-image {
+  display: flex;
+  align-items: center;
+  border: 1px dashed #617192;
+  border-radius: 4px;
+}
+
+.gallery__add-image > input {
+  display: none;
+}

@@ -1,0 +1,11 @@
+.gallery-card {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
