@@ -35,7 +35,6 @@ export const fetchImages = createAsyncThunk('project/fetchImages', async () => {
   const galleryImages: GalleryImages = {}
   try {
     const galleryImagesId = await fetchImagesId()
-    //console.log('galleryImagesId', galleryImagesId)
     for (const imageId of galleryImagesId) {
       const image = localStorage.getItem(imageId)
       if (image) {
@@ -99,7 +98,6 @@ const projectSlice = createSlice({
       state.activeMenuItem = action.payload
     },
     setSlideTemplate(state, action) {
-      console.log(action.payload)
       const { slideIndex, slides } = state
       slides[slideIndex].template = action.payload
       state.slides = [...slides]

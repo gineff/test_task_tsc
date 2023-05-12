@@ -8,7 +8,6 @@ const ButtonAddToCart = () => {
 
   const addToCart = () => {
     /** dispatch('addToCart) */
-    console.log('modal')
     toggleModal()
   }
 

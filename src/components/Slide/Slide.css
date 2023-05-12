@@ -21,7 +21,7 @@
   border-width: calc(var(--slide-outer-border) + var(--slide-border));
   border-color: #f1f1f1;
   border-right: none;
-  background: url(images/cell.png) repeat-y;
+  background: url(/images/cell.png) repeat-y;
   background-size: 3px 20px;
   background-position: right;
   box-sizing: border-box;
@@ -67,6 +67,7 @@
 
 .slide__image {
   width: 60%;
+  cursor: pointer;
 }
 
 .slide img {

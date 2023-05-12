@@ -32,7 +32,6 @@ const Pattern = () => {
     event.stopPropagation()
     event.preventDefault()
   }
-  console.log('slides', slides)
   return (
     <div className="pattern">
       <div className="pattern__header">
