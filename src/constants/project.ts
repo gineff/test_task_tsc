@@ -37,9 +37,9 @@ export const projectInitialState: ProjectSlice = {
   activeMenuItem: MenuItems.gallery,
   slideIndex: 0,
   templates: [
-    'src/assets/images/background_1.png',
-    'src/assets/images/background_2.png',
-    'src/assets/images/background_3.png',
+    'images/background_1.png',
+    'images/background_2.png',
+    'images/background_3.png',
   ],
   slides: Array.from({ length: 3 }, () => ({
     image: null,

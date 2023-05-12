@@ -6,6 +6,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [tsconfigPaths(), react()],
+  publicDir: './src/assets',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
